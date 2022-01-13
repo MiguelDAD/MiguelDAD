@@ -1,3 +1,4 @@
+<img align="left" width="240" src="https://static.wikia.nocookie.net/jimmyneutron/images/5/57/Jimmy_Neutron.png/revision/latest?cb=20180219044703">
 ### Hi there 👋
 
 📒 I’m currently learning Java, MySQL, HTML, CSS, JavaScrip in DAM
