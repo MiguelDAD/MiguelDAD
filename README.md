@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-📒 I’m currently learning JAVA, SQL, HTML, CSS, JAVA SCRIPT in DAM
+📒 I’m currently learning Java, MySQL, HTML, CSS, JavaScrip in DAM
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=MiguelDAD&title=Joined2020,Commits,Followers,Repositories)](https://github.com/ryo-ma/github-profile-trophy)
 
