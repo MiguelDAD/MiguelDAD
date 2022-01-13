@@ -1,11 +1,11 @@
 <img align="left" height="240" src="https://static.wikia.nocookie.net/jimmyneutron/images/5/57/Jimmy_Neutron.png/revision/latest?cb=20180219044703">
 <strong>Hi there 👋</strong>
 
-📒 I’m currently learning Java, MySQL, HTML, CSS, JavaScrip in DAM
+📒 - I’m currently learning Java, MySQL, HTML, CSS, JavaScrip in DAM
 
-💭 One of my dreams is work how teacher 👨‍🏫, learn to create a Minecraft plugins and good servers 👨‍💻, live on the field 🏞️, and create one camper 🚗  to travel 🗺️ and working 💻 as same time ⌛
+💭 - One of my dreams is work how teacher 👨‍🏫, learn to create a Minecraft plugins and good servers 👨‍💻, live on the field 🏞️, and create one camper 🚗  to travel 🗺️ and working 💻 as same time ⌛
 
-🎯 In my free time I practique 🏊‍♂️🚴🏃 and more activities...
+🎯 - In my free time I practique 🏊‍♂️🚴🏃 and more activities...
 
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=MiguelDAD&title=Joined2020,Commits,Followers,Repositories)](https://github.com/ryo-ma/github-profile-trophy)
