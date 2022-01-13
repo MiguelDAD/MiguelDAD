@@ -3,6 +3,11 @@
 
 📒 I’m currently learning Java, MySQL, HTML, CSS, JavaScrip in DAM
 
+💭 One of my dreams is work how teacher 👨‍🏫, learn to create a Minecraft plugins and good servers 👨‍💻, live on the field 🏞️ and create one camper 🚗  to travel 🗺️ and working 💻 as same time ⌛
+
+🎯 In my free time I practique 🏊‍♂️🚴🏃 and more activities...
+
+
 [![trophy](https://github-profile-trophy.vercel.app/?username=MiguelDAD&title=Joined2020,Commits,Followers,Repositories)](https://github.com/ryo-ma/github-profile-trophy)
 
 <!--
