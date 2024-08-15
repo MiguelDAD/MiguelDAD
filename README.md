@@ -12,7 +12,6 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/migueldaad" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="migueldaad" height="30" width="40" /></a>
-<a href="https://stackoverflow.com/users/migueldad" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="migueldad" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/migueldad" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="migueldad" height="30" width="40" /></a>
 </p>
 
