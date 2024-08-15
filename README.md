@@ -3,7 +3,7 @@
   
 <br />👨‍💻 - I am programmer and computer technician.
 
-📒 - I studied DAM(Cross-platform application development) and SMR (Microcomputer systems and local networks).
+📒 - I studied DAM (Cross-platform application development) and SMR (Microcomputer systems and local networks).
 
 💭 - One of my dreams is to work as a teacher 👨‍🏫, to live on the field 🏞️, and create one camper 🚗  to travel 🗺️ and work 💻 at the same time ⌛
 
