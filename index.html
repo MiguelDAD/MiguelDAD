@@ -1,449 +1,545 @@
 <!DOCTYPE html>
-
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel García | Portfolio</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-    *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-    }
-
-    :root{
-        --bg:#0f172a;
-        --bg-secondary:#1e293b;
-        --card:#111827;
-        --accent:#38bdf8;
-        --text:#f8fafc;
-        --text-secondary:#94a3b8;
-    }
-
-    html{
-        scroll-behavior:smooth;
-    }
-
-    body{
-        font-family:'Poppins',sans-serif;
-        background:var(--bg);
-        color:var(--text);
-        line-height:1.6;
-    }
-
-    .container{
-        width:90%;
-        max-width:1200px;
-        margin:auto;
-    }
-
-    nav{
-        position:fixed;
-        width:100%;
-        background:rgba(15,23,42,.95);
-        backdrop-filter:blur(10px);
-        z-index:100;
-    }
-
-    nav .container{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:1rem 0;
-    }
-
-    .logo{
-        font-size:1.4rem;
-        font-weight:700;
-        color:var(--accent);
-    }
-
-    nav ul{
-        display:flex;
-        list-style:none;
-        gap:2rem;
-    }
-
-    nav a{
-        color:white;
-        text-decoration:none;
-        transition:.3s;
-    }
-
-    nav a:hover{
-        color:var(--accent);
-    }
-
-    header{
-        min-height:100vh;
-        display:flex;
-        align-items:center;
-        text-align:center;
-    }
-
-    .hero h1{
-        font-size:4rem;
-        margin-bottom:1rem;
-    }
-
-    .hero span{
-        color:var(--accent);
-    }
-
-    .hero p{
-        max-width:700px;
-        margin:auto;
-        color:var(--text-secondary);
-        margin-bottom:2rem;
-    }
-
-    .btn{
-        display:inline-block;
-        padding:12px 24px;
-        background:var(--accent);
-        color:#000;
-        font-weight:600;
-        border-radius:8px;
-        text-decoration:none;
-    }
-
-    section{
-        padding:100px 0;
-    }
-
-    h2{
-        text-align:center;
-        margin-bottom:3rem;
-        font-size:2.5rem;
-    }
-
-    .about{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:3rem;
-    }
-
-    .skills{
-        display:flex;
-        flex-wrap:wrap;
-        gap:1rem;
-        justify-content:center;
-    }
-
-    .skill{
-        background:var(--bg-secondary);
-        padding:.8rem 1.2rem;
-        border-radius:999px;
-    }
-
-    .projects{
-        display:grid;
-        grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-        gap:2rem;
-    }
-
-    .project-card{
-        background:var(--card);
-        border-radius:16px;
-        padding:2rem;
-        transition:.3s;
-    }
-
-    .project-card:hover{
-        transform:translateY(-5px);
-    }
-
-    .project-card h3{
-        margin-bottom:1rem;
-        color:var(--accent);
-    }
-
-    .project-card h3 a{
-        color:var(--accent);
-    }
-
-    .project-card p{
-        color:var(--text-secondary);
-        margin-bottom:1rem;
-    }
-
-    .tags{
-        display:flex;
-        flex-wrap:wrap;
-        gap:.5rem;
-    }
-
-    .tag{
-        background:var(--bg-secondary);
-        padding:.4rem .8rem;
-        border-radius:999px;
-        font-size:.85rem;
-    }
-
-    footer{
-        text-align:center;
-        padding:3rem 0;
-        color:var(--text-secondary);
-    }
-
-    a{
-        color: #c4c4c4;
-    }
-
-    @media(max-width:768px){
-
-        .hero h1{
-            font-size:2.5rem;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .about{
-            grid-template-columns:1fr;
+        :root {
+            --bg: #0f172a;
+            --bg-secondary: #1e293b;
+            --card: #111827;
+            --accent: #38bdf8;
+            --text: #f8fafc;
+            --text-secondary: #94a3b8;
         }
 
-        nav ul{
-            gap:1rem;
+        html {
+            scroll-behavior: smooth;
         }
-    }
-</style>
 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
+        /* --- CLASES DE IDIOMA --- */
+        /* Ocultar inglés por defecto si el body tiene la clase 'es' */
+        body.es .lang-en {
+            display: none;
+        }
+
+        /* Ocultar español si el body tiene la clase 'en' */
+        body.en .lang-es {
+            display: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(15, 23, 42, .95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Botón para cambiar idioma */
+        .btn-lang {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 4px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+            transition: .3s;
+        }
+
+        .btn-lang:hover {
+            background: var(--accent);
+            color: #000;
+        }
+
+        header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero span {
+            color: var(--accent);
+        }
+
+        .blanco {
+            color: var(--text);
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: #000;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .skill {
+            background: var(--bg-secondary);
+            padding: .8rem 1.2rem;
+            border-radius: 999px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .project-card h3 a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+        }
+
+        .tag {
+            background: var(--bg-secondary);
+            padding: .4rem .8rem;
+            border-radius: 999px;
+            font-size: .85rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+        }
+
+        .links-contacto a {
+            color: #c4c4c4;
+        }
+
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="es">
+    <nav>
+        <div class="container">
+            <div class="logo">Miguel García</div>
+            <ul>
+                <li>
+                    <a href="#sobre-mi">
+                        <span class="lang-es">Sobre mí</span>
+                        <span class="lang-en">About me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#tecnologias">
+                        <span class="lang-es">Tecnologías</span>
+                        <span class="lang-en">Skills</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#proyectos">
+                        <span class="lang-es">Proyectos</span>
+                        <span class="lang-en">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contacto">
+                        <span class="lang-es">Contacto</span>
+                        <span class="lang-en">Contact</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="lang-toggle" class="btn-lang" onclick="toggleLanguage()">EN</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
-    <div class="container">
-        <div class="logo">Miguel García</div>
-
-
-    <ul>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#tecnologias">Tecnologías</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</div>
-
-
-</nav>
-
-<header>
-    <div class="container hero">
-
-
-    <h1>Hola, soy <span>Miguel</span></h1>
-
-    <p>
-        Apuesto por el constante aprendizaje, saliendo de mi zona de confort, y sobre todo, conociendo nuevas tecnologías. Me encantaría seguir creciendo tanto académicamente como profesionalmente.
-    </p>
-
-    <a href="#proyectos" class="btn">Ver proyectos</a>
-
-</div>
-
-
-</header>
-
-<section id="sobre-mi">
-    <div class="container">
-
-
-    <h2>Sobre mí</h2>
-
-    <div class="about">
-
-        <div>
-            <p>
-                Cursé DAM y SMR, actualmente estudio Ingeniería Informática y desarrollo proyectos relacionados con aplicaciones web, bases de datos, simuladores interactivos y software empresarial.
+    <header>
+        <div class="container hero">
+            <h1 class="lang-es">
+                Hola, soy <span>Miguel</span>
+            </h1>
+            <h1 class="lang-en">Hello, I'm <span>Miguel</span>
+            </h1>
+            <p class="lang-es">
+                Apuesto por el constante aprendizaje, saliendo de mi zona de confort, y sobre todo, conociendo nuevas
+                tecnologías. Me encantaría seguir creciendo tanto académicamente como profesionalmente.
             </p>
+            <p class="lang-en">
+                I am committed to constant learning, stepping out of my comfort zone, and above all, discovering new
+                technologies. I would love to continue growing both academically and professionally.
+            </p>
+            <a href="#proyectos" class="btn lang-es">Ver proyectos
+            </a>
+            <a href="#proyectos" class="btn lang-en">View projects
+            </a>
+        </div>
+    </header>
 
+    <section id="sobre-mi">
+        <div class="container">
+            <h2>
+                <span class="lang-es">Sobre mí</span>
+                <span class="lang-en">About me</span>
+            </h2>
+            <div class="about">
+                <div>
+                    <p class="lang-es">
+                        Cursé DAM y SMR, actualmente estudio Ingeniería Informática y desarrollo proyectos relacionados
+                        con aplicaciones web, bases de datos, simuladores interactivos y software empresarial.
+                    </p>
+                    <p class="lang-en">
+                        I studied DAM (Multi-platform App Development) and SMR (Microcomputer Systems), currently
+                        studying Computer Engineering and developing projects related to web apps, databases,
+                        interactive simulators, and business software.
+                    </p>
+                    <br>
+                    <p class="lang-es">
+                        También me interesan los videojuegos, la tecnología, la programación competitiva y la creación
+                        de soluciones orientadas a usuarios reales.
+                    </p>
+                    <p class="lang-en">
+                        I am also interested in video games, technology, competitive programming, and creating solutions
+                        oriented to real users.
+                    </p>
+                </div>
+                <div>
+                    <p class="lang-es">
+                        Algunos de mis proyectos incluyen una red social deportiva, simuladores educativos para la
+                        universidad, aplicaciones web medioambientales, sistemas de gestión empresarial y soluciones
+                        avanzadas con Oracle y PL/SQL.
+                    </p>
+                    <p class="lang-en">
+                        Some of my projects include a sports social network, educational simulators for the university,
+                        environmental web applications, business management systems, and advanced solutions with Oracle
+                        and PL/SQL.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologias">
+        <div class="container">
+            <h2>
+                <span class="lang-es">Tecnologías</span>
+                <span class="lang-en">Technologies</span>
+            </h2>
+            <div class="skills">
+                <div class="skill">C++</div>
+                <div class="skill">Java</div>
+                <div class="skill">Python</div>
+                <div class="skill">C#</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Oracle SQL</div>
+                <div class="skill">PL/SQL</div>
+                <div class="skill">Unity</div>
+                <div class="skill">Git</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <div class="container">
+            <h2>
+                <span class="lang-es">Proyectos Destacados</span>
+                <span class="lang-en">Featured Projects</span>
+            </h2>
+            <div class="projects">
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelDAD/PI-Basilisk" target="_blank">Basilisk</a> </h3>
+                    <p class="lang-es">
+                        Plataforma social deportiva que permite crear equipos, ligas, torneos y partidos. Incluye
+                        sistema de gestión, geolocalización, organización de eventos pasarela de pagos.
+                    </p>
+                    <p class="lang-en">
+                        Sports social platform that allows creating teams, leagues, tournaments, and matches. It
+                        includes a management system, geolocation, event organization, and a payment gateway.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Android</span>
+                        <span class="tag lang-es">Servidor</span><span class="tag lang-en">Server</span>
+                        <span class="tag lang-es">Cliente</span><span class="tag lang-en">Client</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelGarcia29/Evaporador-VR" target="_blank">Evaporizador VR</a>
+                    </h3>
+                    <p class="lang-es">
+                        Simulador educativo desarrollado para la Universidad de Cádiz. Recrea un evaporizador industrial
+                        en un entorno 3D interactivo para facilitar el aprendizaje de estudiantes de química.
+                    </p>
+                    <p class="lang-en">
+                        Educational simulator developed for the University of Cadiz. It recreates an industrial
+                        evaporator in an interactive 3D environment to facilitate learning for chemistry students.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">VR</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelGarcia29/Esizon-MP-2024-C" target="_blank">ESIZON</a></h3>
+                    <p class="lang-es">
+                        Sistema de comercio electrónico orientado a la compra y venta de productos. Incluye gestión de
+                        usuarios, inventario, descuentos, pedidos y logística de entrega.
+                    </p>
+                    <p class="lang-en">
+                        E-commerce system focused on buying and selling products. It includes user management,
+                        inventory, discounts, orders, and delivery logistics.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">C</span>
+                        <span class="tag lang-es">Ficheros</span><span class="tag lang-en">Files</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelGarcia29/RefugioAnimal-OR"
+                            target="_blank">RefugioAnimal-OR</a></h3>
+                    <p class="lang-es">
+                        Sistema de gestión para refugios de animales utilizando Oracle Database y PL/SQL con enfoque
+                        Objeto-Relacional. Automatización mediante paquetes y triggers.
+                    </p>
+                    <p class="lang-en">
+                        Management system for animal shelters using Oracle Database and PL/SQL with an Object-Relational
+                        approach. Automation through packages and triggers.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">OracleSQL</span>
+                        <span class="tag">PL/SQL</span>
+                        <span class="tag">O/R</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelGarcia29/CalculadoraCO2" target="_blank">Calculadora CO₂</a>
+                    </h3>
+                    <p class="lang-es">
+                        Aplicación web para estimar la huella de carbono de distintos medios de transporte y fomentar
+                        decisiones más sostenibles.
+                    </p>
+                    <p class="lang-en">
+                        Web application to estimate the carbon footprint of different means of transport and encourage
+                        more sustainable decisions.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3><a href="https://github.com/MiguelDAD/AceptaElReto" target="_blank">AceptaElReto Solutions</a>
+                    </h3>
+                    <p class="lang-es">
+                        Colección de soluciones a problemas de programación del juez online Acepta el Reto. Proyecto
+                        enfocado en algoritmia, estructuras de datos y programación competitiva.
+                    </p>
+                    <p class="lang-en">
+                        Collection of solutions to programming problems from the online judge 'Acepta el Reto'. Project
+                        focused on algorithms, data structures, and competitive programming.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Java</span>
+                        <span class="tag lang-es">Algoritmos</span><span class="tag lang-en">Algorithms</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="links-contacto">
+        <div class="container">
+            <h2>
+                <span class="lang-es">Contacto</span>
+                <span class="lang-en">Contact</span>
+            </h2>
+            <p style="text-align:center;">
+                <span class="lang-es">¿Te interesa alguno de mis proyectos?<br>Puedes encontrarme en GitHub o
+                    LinkedIn.</span>
+                <span class="lang-en">Are you interested in any of my projects?<br>You can find me on GitHub or
+                    LinkedIn.</span>
+            </p>
             <br>
-
-            <p>
-                También me interesan los videojuegos, la tecnología, la programación competitiva y la creación de soluciones orientadas a usuarios reales.
+            <p style="text-align:center;">
+                <span class="lang-es">GitHub Universitario:</span><span class="lang-en">University GitHub:</span>
+                <a href="https://github.com/MiguelGarcia29" target="_blank">github.com/MiguelGarcia29</a>
+            </p>
+            <p style="text-align:center;">
+                <span class="lang-es">GitHub Personal:</span><span class="lang-en">Personal GitHub:</span>
+                <a href="https://github.com/MiguelDAD" target="_blank">github.com/MiguelDAD</a>
+            </p>
+            <p style="text-align:center;">
+                LinkedIn: <a href="https://linkedin.com/in/miguelgarciabernal"
+                    target="_blank">linkedin.com/in/miguelgarciabernal</a>
             </p>
         </div>
+    </section>
 
-        <div>
-            <p>
-                Algunos de mis proyectos incluyen una red social deportiva, simuladores educativos para la universidad, aplicaciones web medioambientales, sistemas de gestión empresarial y soluciones avanzadas con Oracle y PL/SQL.
-            </p>
-        </div>
+    <footer>
+        <span class="lang-es">© 2026 Miguel García · Portfolio Personal</span>
+        <span class="lang-en">© 2026 Miguel García · Personal Portfolio</span>
+    </footer>
 
-    </div>
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.getElementById('lang-toggle');
 
-</div>
-
-
-</section>
-
-<section id="tecnologias">
-
-
-<div class="container">
-
-    <h2>Tecnologías</h2>
-
-    <div class="skills">
-
-        <div class="skill">C++</div>
-        <div class="skill">Java</div>
-        <div class="skill">Python</div>
-        <div class="skill">C#</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">Oracle SQL</div>
-        <div class="skill">PL/SQL</div>
-        <div class="skill">Unity</div>
-        <div class="skill">Git</div>
-
-    </div>
-
-</div>
-
-
-</section>
-
-<section id="proyectos">
-
-
-<div class="container">
-
-    <h2>Proyectos Destacados</h2>
-
-    <div class="projects">
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelDAD/PI-Basilisk" target="_blank">Basilisk</a> </h3>
-
-            <p>
-                Plataforma social deportiva que permite crear equipos, ligas, torneos y partidos. Incluye sistema de gestión, geolocalización, organización de eventos pasarela de pagos.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Java</span>
-                <span class="tag">Android</span>
-                <span class="tag">Servidor</span>
-                <span class="tag">Cliente</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelGarcia29/Evaporador-VR" target="_blank">Evaporizador VR</a></h3>
-
-            <p>
-                Simulador educativo desarrollado para la Universidad de Cádiz. Recrea un evaporizador industrial en un entorno 3D interactivo para facilitar el aprendizaje de estudiantes de química.
-            </p>
-
-            <div class="tags">
-                <span class="tag">Unity</span>
-                <span class="tag">C#</span>
-                <span class="tag">VR</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelGarcia29/Esizon-MP-2024-C" target="_blank">ESIZON</a></h3>
-
-            <p>
-                Sistema de comercio electrónico orientado a la compra y venta de productos. Incluye gestión de usuarios, inventario, descuentos, pedidos y logística de entrega.
-            </p>
-
-            <div class="tags">
-                <span class="tag">C</span>
-                <span class="tag">Ficheros</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelGarcia29/RefugioAnimal-OR" target="_blank">RefugioAnimal-OR</a></h3>
-
-            <p>
-                Sistema de gestión para refugios de animales utilizando Oracle Database y PL/SQL con enfoque Objeto-Relacional. Automatización mediante paquetes y triggers.
-            </p>
-
-            <div class="tags">
-                <span class="tag">OracleSQL</span>
-                <span class="tag">PL/SQL</span>
-                <span class="tag">O/R</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelGarcia29/CalculadoraCO2" target="_blank">Calculadora CO₂</a></h3>
-
-            <p>
-                Aplicación web para estimar la huella de carbono de distintos medios de transporte y fomentar decisiones más sostenibles.
-            </p>
-
-            <div class="tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3><a href="https://github.com/MiguelDAD/AceptaElReto target="_blank"">AceptaElReto Solutions</a></h3>
-
-            <p>
-                Colección de soluciones a problemas de programación del juez online Acepta el Reto. Proyecto enfocado en algoritmia, estructuras de datos y programación competitiva.
-            </p>
-
-            <div class="tags">
-                <span class="tag">C++</span>
-                <span class="tag">Java</span>
-                <span class="tag">Algoritmos</span>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-</section>
-
-<section id="contacto">
-
-
-<div class="container">
-
-    <h2>Contacto</h2>
-
-    <p style="text-align:center;">
-        ¿Te interesa alguno de mis proyectos?
-        Puedes encontrarme en GitHub o LinkedIn.
-    </p>
-
-    <br>
-
-    <p style="text-align:center;">
-        GitHub Universitario: <a href="https://github.com/MiguelGarcia29" target="_blank">github.com/MiguelGarcia29</a>
-    </p>
-
-    <p style="text-align:center;">
-        GitHub Personal: <a href="https://github.com/MiguelDAD" target="_blank">github.com/MiguelDAD</a>
-    </p>
-
-    <p style="text-align:center;">
-        LinkedIn: <a href="https://linkedin.com/in/miguelgarciabernal" target="_blank"">linkedin.com/in/miguelgarciabernal</a>
-    </p>
-
-</div>
-
-
-</section>
-
-<footer>
-    © 2026 Miguel García · Portfolio Personal
-</footer>
+            if (body.classList.contains('es')) {
+                body.classList.remove('es');
+                body.classList.add('en');
+                btn.innerText = 'ES';
+                document.documentElement.lang = 'en';
+            } else {
+                body.classList.remove('en');
+                body.classList.add('es');
+                btn.innerText = 'EN';
+                document.documentElement.lang = 'es';
+            }
+        }
+    </script>
 
 </body>
+
 </html>
